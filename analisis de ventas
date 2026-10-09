@@ -1,1 +1,41 @@
+#include <iostream>
+using namespace std; 
+//Prototipo de funciones
+void leerVentas (double &venta1, double &venta2, double &venta3, double &venta4, double &venta5);
+double ProcesarVentas (double venta1, double venta2,double venta3,double venta4, double venta5);
+void MostrarResultados (double resultados);
+int main()
+//Variables locales para cada venta 
+{double venta1=0, venta2=0, venta3=0, venta4=0,venta5=0;
+//lectura de las 5 ventas
+leerVentas(venta1,venta2,venta3,venta4, venta5);
+//procesamiento de las ventas
+double total = ProcesarVentas(venta1, venta2, venta3, venta4, venta5);
+    
+    MostrarResultados(total);
 
+    ;
+}
+
+// 3. Detalles de las funciones
+
+void leerVentas(double &venta1, double &venta2, double &venta3, double &venta4, double &venta5) {
+    cout << "Ingrese la venta del dia 1: "; cin >> venta1;
+    cout << "Ingrese la venta del dia 2: "; cin >> venta2;
+    cout << "Ingrese la venta del dia 3: "; cin >> venta3;
+    cout << "Ingrese la venta del dia 4: "; cin >> venta4;
+    cout << "Ingrese la venta del dia 5: "; cin >> venta5;
+}
+
+// Retorna directamente el resultado decimal (double)
+double procesarVentas(double venta1, double venta2, double venta3, double venta4, double venta5) {
+    return venta1 + venta2 + venta3 + venta4 + venta5;
+}
+
+void mostrarResultados(double total) {
+    cout << "\nSalida esperada:" << endl;
+    cout << "total = " << total << endl;
+
+
+
+return 0
